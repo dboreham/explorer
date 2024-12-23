@@ -52,6 +52,8 @@ import { OnChainTransactionsRepository } from './transactions/OnChainTransaction
 import { ExpiredTransactionsProcessor } from './transactions/ExpiredTransactionsProcessor.js';
 import { InfoResolver } from './info.resolver.js';
 
+// Start a set of processors from the list below, specified in the env var ROLES
+
 const roles = process.env.ROLES!.split(',');
 
 const workersMap = new Map<string, Type<any>>([

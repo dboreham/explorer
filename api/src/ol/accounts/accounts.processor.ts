@@ -6,6 +6,10 @@ import { AccountsService } from './accounts.service.js';
 import { redisClient } from '../../redis/redis.service.js';
 import { TOP_BALANCE_ACCOUNTS_CACHE_KEY } from '../constants.js';
 
+// This processor queries for the top 100 accounts by balance from Clickhouse
+// and stores the result in Redis.
+// This is currently used only by the TopAccount GraphQL query.
+
 @Processor('accounts')
 export class AccountsProcessor extends WorkerHost implements OnModuleInit {
   public constructor(
