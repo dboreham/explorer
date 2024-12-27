@@ -12,6 +12,9 @@ import { cleanUp } from '../utils.js';
 import { S3Service } from '../s3/s3.service.js';
 import { NotPendingTransaction } from './types.js';
 
+// This processor seems to pull a batch of transaction data from
+// clickhouse then upload it to S3.
+
 const execFile = util.promisify(execFileNative);
 
 export interface VersionBatchJobData {

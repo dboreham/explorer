@@ -14,6 +14,9 @@ import { S3Service } from '../s3/s3.service.js';
 import { cleanUp, createTmpDir } from '../utils.js';
 import { TransformerService } from './transformer.service.js';
 
+// This processor seems to handle historical data pulled from S3, making it
+// ready for ingestion into clickhouse (check if this is correct).
+
 const execFile = util.promisify(execFileNative);
 
 const PARQUETS_DIR = 'parquets';

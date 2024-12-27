@@ -27,6 +27,10 @@ import { ITransactionsService } from './transactions/interfaces.js';
 import { Types } from '../types.js';
 import { OlService } from './ol.service.js';
 
+// Pretty unclear what this processor does, but it seems to 
+// involve itself with determining the delta between what's in the
+// database and what's on chain.
+
 const ZERO = new BN(0);
 const ONE = new BN(1);
 
